@@ -181,7 +181,10 @@ install_sonarqube_git() {
   # `unzip` command is not available.
   cd ${BUILD_DIR}
   ls -l
-  jar xvf ${CACHE_DIR}/${GITPLUGIN_DIST_ZIP} >/dev/null
+  echo "extracting jar"
+  jar xvf ${CACHE_DIR}/sonar-scm-git-plugin-1.3.zip >/dev/null
+  echo "jar extraction is completed"
+  ls -l
   mv sonar-github-plugin ${CODESCAN_HOME}
 
   cp $CODESCAN_HOME/sonar-github-plugin-$GIT_PLUGIN_VERSION.jar $SONAR_HOME/extensions/plugins
