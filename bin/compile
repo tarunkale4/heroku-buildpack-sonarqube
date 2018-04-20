@@ -176,7 +176,7 @@ install_sonarqube_git() {
  
   cd  ${CACHE_DIR}
   ls -l
-  jar xvf sonar-scm-git-plugin-1.3.zip >/dev/null
+  unzip sonar-scm-git-plugin-1.3.zip .
   ls -l
   echo -n "-----> Installing ${GITPLUGIN_DIST}...."
 
