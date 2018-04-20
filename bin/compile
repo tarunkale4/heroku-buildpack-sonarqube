@@ -9,7 +9,7 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 BP_DIR=`cd $(dirname $0); cd ..; pwd`
-
+echo ${BUILD_DIR}
 SONAR_VERSION="6.3.1"
 CODESCAN_VERSION="4.0.5"
 ANT_VERSION="1.9.9"
