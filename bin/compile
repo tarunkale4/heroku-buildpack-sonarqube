@@ -173,7 +173,10 @@ install_sonarqube_git() {
     curl --silent --location ${GITPLUGIN_URL} > ${CACHE_DIR}/${GITPLUGIN_DIST_ZIP}
     echo " done"
   fi
+ 
   cd  ${CACHE_DIR}
+  ls -l
+  jar xvf sonar-scm-git-plugin-1.3.zip >/dev/null
   ls -l
   echo -n "-----> Installing ${GITPLUGIN_DIST}...."
 
