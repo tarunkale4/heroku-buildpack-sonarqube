@@ -173,13 +173,14 @@ install_sonarqube_git() {
     curl --silent --location ${GITPLUGIN_URL} > ${CACHE_DIR}/${GITPLUGIN_DIST_ZIP}
     echo " done"
   fi
-
+  cd  ${CACHE_DIR}
+  ls -l
   echo -n "-----> Installing ${GITPLUGIN_DIST}...."
 
   # Unzip Codescan
   # `unzip` command is not available.
   cd ${BUILD_DIR}
-
+  ls -l
   jar xvf ${CACHE_DIR}/${GITPLUGIN_DIST_ZIP} >/dev/null
   mv sonar-github-plugin ${CODESCAN_HOME}
 
